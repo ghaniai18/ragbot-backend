@@ -5,8 +5,8 @@ import sqlite3
 from dotenv import load_dotenv
 from auth import create_access_token, verify_user
 from openai import OpenAI
-import chromadb
-from sentence_transformers import SentenceTransformer
+#import chromadb
+#from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.openapi.utils import get_openapi
@@ -445,7 +445,12 @@ def view_files(user_id: int = Depends(get_current_user_id)):
 
    
 import os
-uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000))) 
+import uvicorn
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
+
    
    
    
