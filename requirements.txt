@@ -15,3 +15,4 @@ mammoth
 docx2pdf
 markdown
 starlette
+python-jose
