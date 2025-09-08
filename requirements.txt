@@ -16,3 +16,4 @@ docx2pdf
 markdown
 starlette
 python-jose
+python-multipart
