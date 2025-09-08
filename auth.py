@@ -1,5 +1,5 @@
 import sqlite3
-import jwt
+#import jwt
 from datetime import datetime, timedelta
 from fastapi import HTTPException, Depends
 from fastapi.security import OAuth2PasswordBearer
