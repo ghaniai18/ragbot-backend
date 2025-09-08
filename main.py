@@ -444,7 +444,8 @@ def view_files(user_id: int = Depends(get_current_user_id)):
     
 
    
-   
+import os
+uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000))) 
    
    
    
