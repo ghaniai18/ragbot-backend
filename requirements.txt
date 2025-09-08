@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+python-dotenv
+openai
+chromadb
+sentence-transformers
+pandas
+python-docx
+python-jose
+pillow
+pytesseract
+pdf2image
+pymupdf
+mammoth
+docx2pdf
+markdown
+starlette
