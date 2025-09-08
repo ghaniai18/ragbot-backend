@@ -30,12 +30,12 @@ from fastapi import Query
 from fastapi.responses import StreamingResponse
 import mimetypes
 from auth import get_user_id_from_token
-import pytesseract, io 
-from pdf2image import convert_from_path
+#import pytesseract, io 
+#from pdf2image import convert_from_path
 from PIL import Image
 from docx import Document
 import pandas as pd
-from docx2pdf import convert
+#from docx2pdf import convert
 import tempfile
 import markdown
 import mammoth
