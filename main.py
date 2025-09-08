@@ -5,7 +5,7 @@ import sqlite3
 from dotenv import load_dotenv
 from auth import create_access_token, verify_user
 from openai import OpenAI
-#import chromadb
+import chromadb
 #from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import JSONResponse
@@ -48,7 +48,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 base_url = os.getenv("OPENAI_BASE_URL")
 selected_files = {}
 client = OpenAI(api_key=api_key, base_url=base_url)
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+#embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 app = FastAPI()
 #app.middleware("http")(jwt_auth_middleware)
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
