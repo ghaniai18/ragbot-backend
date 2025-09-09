@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from auth import create_access_token, verify_user
 from openai import OpenAI
 import chromadb
-from sentence_transformers import SentenceTransformer
+#from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.openapi.utils import get_openapi
@@ -30,12 +30,12 @@ from fastapi import Query
 from fastapi.responses import StreamingResponse
 import mimetypes
 from auth import get_user_id_from_token
-import pytesseract, io 
-from pdf2image import convert_from_path
+#import pytesseract, io 
+#from pdf2image import convert_from_path
 from PIL import Image
 from docx import Document
 import pandas as pd
-from docx2pdf import convert
+#from docx2pdf import convert
 import tempfile
 import markdown
 import mammoth
@@ -48,7 +48,7 @@ api_key = os.getenv("OPENAI_API_KEY")
 base_url = os.getenv("OPENAI_BASE_URL")
 selected_files = {}
 client = OpenAI(api_key=api_key, base_url=base_url)
-embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
+#embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 app = FastAPI()
 #app.middleware("http")(jwt_auth_middleware)
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
@@ -444,7 +444,13 @@ def view_files(user_id: int = Depends(get_current_user_id)):
     
 
    
-   
+import os
+import uvicorn
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("main:app", host="0.0.0.0", port=port, reload=False)
+
    
    
    
