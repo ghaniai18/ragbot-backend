@@ -41,7 +41,10 @@ def verify_user(username: str, password: str):
 
 
 async def jwt_auth_middleware(request: Request, call_next):
-    excluded_paths = ["/login", "/register", "/docs", "/openapi.json", "/favicon.ico"]
+    excluded_paths = ["/login", "/register", "/docs", "/openapi.json", "/favicon.ico", "/", ]
+
+    if request.url.path.startswith("/static"):
+        return await call_next(request)
 
     if request.url.path in excluded_paths:
         return await call_next(request)
