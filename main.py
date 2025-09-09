@@ -39,7 +39,7 @@ import pandas as pd
 import tempfile
 import markdown
 import mammoth
-
+from auth import jwt_auth_middleware
  
 
     
@@ -50,7 +50,7 @@ selected_files = {}
 client = OpenAI(api_key=api_key, base_url=base_url)
 #embedding_model = SentenceTransformer("all-MiniLM-L6-v2")
 app = FastAPI()
-#app.middleware("http")(jwt_auth_middleware)
+app.middleware("http")(jwt_auth_middleware)
 app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 app.add_middleware(
