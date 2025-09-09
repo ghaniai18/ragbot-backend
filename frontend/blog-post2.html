@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Understanding Pricing Tiers - RAGBOT Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Which plan is right for you? Explore RAGBOT's pricing tiers, limits, and who each plan is best for." />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body { background:#f8f9fa; }
+    .pro-badge{font-size:.8rem;padding:.2rem .5rem;border-radius:999px;background:#e7f1ff;color:#0d6efd;}
+    .lead-muted{color:#6c757d;}
+    .post-card{background:#fff;border:1px solid #e9ecef;border-radius:12px;}
+    .divider{height:1px;background:#e9ecef;}
+    .table thead th{background:#f5f7fb;}
+    .cta-card{background:#ffffff;border:1px dashed #cfe2ff;border-radius:12px;}
+    footer { background:#fff;border-top:1px solid #dee2e6; }
+    .sr-only{position:absolute!important;clip:rect(1px,1px,1px,1px);width:1px;height:1px;overflow:hidden;white-space:nowrap;}
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- HEADER (same as upload.html) -->
+  <header class="navbar navbar-dark bg-dark px-3">
+    <a class="navbar-brand" href="upload.html">🤖 RAGBOT</a>
+    <div>
+      <a href="index.html" class="text-white me-3">Home</a>
+      <a href="pricing.html" class="text-white me-3">Pricing</a>
+      <a href="blog.html" class="text-white me-3">Blog</a>
+      <button class="btn btn-outline-light btn-sm" onclick="logout()">Logout</button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="container py-5 flex-grow-1">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <article class="post-card p-4 p-md-5">
+          <header class="mb-4">
+            <h1 class="fw-bold mb-2">Understanding Pricing Tiers</h1>
+            <p class="lead lead-muted mb-1">Which plan is right for you? Let’s explore features of each tier.</p>
+            <small class="text-muted">Published on <time datetime="2025-09-04">September 4, 2025</time> • 4 min read</small>
+          </header>
+
+          <div class="divider mb-4"></div>
+
+          <section class="mb-4">
+            <p>
+              RAGBOT offers two simple plans designed to match where you are on your AI journey. Whether you’re just
+              testing the waters or managing more documents and larger files, this guide will help you pick the plan
+              that fits your workflow.
+            </p>
+          </section>
+
+          <section class="mb-4">
+            <h2 class="h4 mb-3">Plans at a glance</h2>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th scope="col">Feature</th>
+                    <th scope="col">Basic</th>
+                    <th scope="col">Pro <span class="pro-badge">Popular</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Price / month</th>
+                    <td>$10</td>
+                    <td class="fw-semibold text-primary">$20</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Max files</th>
+                    <td>5</td>
+                    <td>10</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Max file size</th>
+                    <td>Up to 50&nbsp;MB</td>
+                    <td>Up to 100&nbsp;MB</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Storage</th>
+                    <td>Secure cloud storage</td>
+                    <td>Secure cloud storage</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Support</th>
+                    <td>Standard</td>
+                    <td>Priority</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="mb-4">
+            <h2 class="h4 mb-3">Who should choose Basic?</h2>
+            <ul class="mb-0">
+              <li>Students and individuals experimenting with RAG workflows.</li>
+              <li>Light usage: a handful of PDFs or docs at a time.</li>
+              <li>Files typically under 50&nbsp;MB (e.g., text-heavy PDFs, Word docs).</li>
+            </ul>
+          </section>
+
+          <section class="mb-4">
+            <h2 class="h4 mb-3">Who should choose Pro?</h2>
+            <ul class="mb-0">
+              <li>Professionals and teams handling more documents simultaneously.</li>
+              <li>Heavier files (presentations, scanned PDFs) up to 100&nbsp;MB.</li>
+              <li>Need faster help with <em>priority support</em>.</li>
+            </ul>
+          </section>
+
+          <section class="mb-4">
+            <h2 class="h4 mb-3">Upgrade later—no lock-in</h2>
+            <p>
+              Start with Basic and upgrade to Pro any time from your account settings. Your files stay safe and your
+              chat history remains available after you switch plans.
+            </p>
+          </section>
+
+          <section aria-label="Call to action" class="mt-4">
+            <div class="cta-card p-4 p-md-5 text-center">
+              <h3 class="h4 mb-3">Ready to pick a plan?</h3>
+              <p class="text-muted mb-4">Transparent pricing. No hidden fees.</p>
+              <a href="pricing.html" class="btn btn-primary btn-lg">View Pricing</a>
+              <a href="blog.html" class="btn btn-outline-secondary btn-lg ms-2">Back to Blog</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-3 text-center text-muted mt-auto">
+    © 2025 RAGBOT • <a href="pricing.html" class="text-decoration-none">Pricing</a> • <a href="blog.html" class="text-decoration-none">Blog</a>
+  </footer>
+
+  <script>
+    function logout() {
+      localStorage.removeItem("token");
+      localStorage.removeItem("user_id");
+      window.location.href = "/static/auth.html";
+    }
+  </script>
+</body>
+</html>
